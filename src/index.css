@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    @apply font-[Poppins];
+}
+
+body {
+    @apply bg-black;
+}
+
+.text-stroke {
+    -webkit-text-stroke: 1px rgba(254, 185, 1, 0.5);
+}
+
+.text-stroke-white {
+    -webkit-text-stroke: 1px white;
+}
+
+
+/* Custom Scrollbar Styles */
+::-webkit-scrollbar {
+    width: 4px;
+    /* Vertical scrollbar */
+    height: 4px;
+    /* Horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-primary;
+    /* This color is for illustration. Replace it with the actual color of bg-primary in your Tailwind CSS version */
+    border-radius: 2px;
+}
+
+/* Optional: Add styles for scrollbar thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-opacity-70;
+    /* Darker shade of primary color */
+}
