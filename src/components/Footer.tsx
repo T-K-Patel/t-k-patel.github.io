@@ -1,17 +1,27 @@
+import Container from "./Container";
+
 function Footer() {
     return (
-        <footer className="sticky top-0  backdrop-blur-sm py-8 max-md:px-5 max-xs:p-2 px-10 z-40">
-            <div className="rounded-full p-2 max-xs:p-1 flex justify-between bg-primary">
-                <div className="flex flex-shrink-0 align-middle">
-                    <img src="/images/tk.png" alt="TK" className="w-12 max-sm:w-8 aspect-square object-contain rounded-full select-none bg-black" />
-                    <h1 className="my-auto mx-3 text-2xl max-sm:text-lg uppercase">TIRTH <span className="font-semibold">KAPADI</span></h1>
+        <Container className="pt-10">
+            <footer className="z-40 px-10 py-8 backdrop-blur-sm max-md:px-5 max-xs:p-2">
+                <div className="flex items-center justify-between rounded-full bg-primary p-2 max-sm:flex-col max-xs:p-1">
+                    <div className="relative my-auto flex h-12 flex-shrink-0 select-none rounded-full align-middle max-sm:h-8">
+                        <span className="my-auto ms-4">
+                            All Rights Reserved &copy;{" "}
+                            {new Date().getFullYear()}
+                        </span>
+                    </div>
+                    <div className="relative my-auto flex h-12 flex-shrink-0 select-none rounded-full align-middle max-sm:h-8 max-xs:hidden">
+                        <span className="my-auto">Designed and Built by</span>
+                        &nbsp;
+                        <span className="my-auto me-4 font-bold">
+                            Tirth&nbsp;Kapadi
+                        </span>
+                    </div>
                 </div>
-                <div className="relative h-12 max-sm:h-8 my-auto rounded-full select-none flex flex-shrink-0 align-middle">
-                    <span className='my-auto'>Designed and Built by</span>&nbsp;<span className="me-4 my-auto max-sm:hidden font-bold">Tirth Kapadi</span>
-                </div>
-            </div>
-        </footer>
-    )
+            </footer>
+        </Container>
+    );
 }
 
-export default Footer
+export default Footer;
